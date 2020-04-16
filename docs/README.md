@@ -2,6 +2,8 @@
 home: true
 heroImage: /ico.png
 actionText: 赶快看我 →
+heroText: 一条程序猿的进化史
+tagline: 热爱生活，享受技术！
 actionLink: /note/
 features:
 - title: 简洁至上
