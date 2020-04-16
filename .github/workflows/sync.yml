@@ -1,4 +1,4 @@
-name: Gitee自动部署
+name: Gitee自动部署s
 
 on:
   push:
