@@ -30,6 +30,11 @@ module.exports = {
           ]
         },
         {
+          title:'JavaScript',children:[
+            { title:'收藏的小技巧',path:'javascript/skill'}
+          ]
+        },
+        {
           title: 'Vue',
           children: [
             'vue/router', 'vue/vuex'
@@ -39,6 +44,12 @@ module.exports = {
           title: 'React',
           children: [
             'react/base'
+          ]
+        },
+        {
+          title: 'Git',
+          children:[
+            { title:'基础',path:'git/base'}
           ]
         }
       ],
