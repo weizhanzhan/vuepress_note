@@ -1,4 +1,4 @@
-# JavaScript小技巧
+# JavaScript，自己觉得有必要了解的东西
 ## 取最大值
 ```js
 

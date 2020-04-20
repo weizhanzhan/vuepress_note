@@ -20,7 +20,7 @@ module.exports = {
     sidebar: {
       '/note/': [
         {
-          title: 'Vuepress', children: [
+          title: 'vuepress', children: [
             { title: '快速搭建', path: 'vuepress/step' }
           ]
         },
@@ -30,24 +30,29 @@ module.exports = {
           ]
         },
         {
-          title:'JavaScript',children:[
-            { title:'收藏的小技巧',path:'javascript/skill'}
+          title:'javascript',children:[
+            { title:'笔记',path:'javascript/skill'}
           ]
         },
         {
-          title: 'Vue',
+          title:'typescript',children:[
+            { title:'笔记',path:'typescript/work'}
+          ]
+        },
+        {
+          title: 'vue',
           children: [
             'vue/router', 'vue/vuex'
           ],
         },
         {
-          title: 'React',
+          title: 'react',
           children: [
             'react/base'
           ]
         },
         {
-          title: 'Git',
+          title: 'git',
           children:[
             { title:'基础',path:'git/base'}
           ]
