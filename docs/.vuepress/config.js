@@ -54,7 +54,8 @@ module.exports = {
         {
           title: 'git',
           children:[
-            { title:'基础',path:'git/base'}
+            { title:'基础',path:'git/base'},
+            { title:'自动部署项目',path:'git/autoplay'}
           ]
         }
       ],
