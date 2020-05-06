@@ -1,5 +1,5 @@
 module.exports = {
-  // base: '/vuepress_note/',
+  base: '/zhanwei/',
   title: 'zhanwei',
   description: '热爱技术，享受生活！',
   head: [
