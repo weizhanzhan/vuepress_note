@@ -3,7 +3,9 @@ module.exports = {
   title: 'zhanwei',
   description: '热爱技术，享受生活！',
   head: [
-    ['link', { rel: 'icon',  href: '/ico.png'  }]
+    ['link', { rel: 'icon',  href: '/ico.png'  }],
+    //增加manifest.json
+    ['link', { rel: 'manifest', href: '/manifest.json' }],
   ],
   themeConfig: {
     // 你的GitHub仓库，请正确填写
@@ -16,7 +18,7 @@ module.exports = {
       { text: 'Languages', items: [ { text: 'Chinese', link: '/language/chinese' },  { text: 'English',  link: '/language/english' } ] }
     ],
     // sidebarDepth: 2,
-    // sidebar: 'auto', 
+    // sidebar: 'auto', /zhanwei/ico.png
     sidebar: {
       '/note/': [
         {
@@ -53,6 +55,12 @@ module.exports = {
           ]
         },
         {
+          title:'极光推送',
+          children:[
+            { title:'APICloud',path:'jpush/apicloud'}
+          ]
+        },
+        {
           title: 'git',
           children:[
             { title:'基础',path:'git/base'},
@@ -62,5 +70,11 @@ module.exports = {
       ],
     },
   },
-  plugins: ['@vuepress/nprogress']
+  plugins: {
+    '@vuepress/nprogress':true,
+    '@vuepress/pwa':{
+      serviceWorker: true,
+      updatePopup: true
+    }
+  }
 }

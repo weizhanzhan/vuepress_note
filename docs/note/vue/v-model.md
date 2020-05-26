@@ -22,4 +22,4 @@ Vue.component('base-checkbox', {
 ```HTML
 <base-checkbox v-model="lovingVue"></base-checkbox>
 ```
-这里的 lovingVue 的值将会传入这个名为 checked 的 prop。同时当 <base-checkbox> 触发一个 change 事件并附带一个新的值的时候，这个 lovingVue 的 property 将会被更新。
+这里的 lovingVue 的值将会传入这个名为 checked 的 prop。同时当 base-checkbox 触发一个 change 事件并附带一个新的值的时候，这个 lovingVue 的 property 将会被更新。
