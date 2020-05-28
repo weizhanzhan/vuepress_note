@@ -1,9 +1,9 @@
 ---
 home: true
-heroImage: /ico.png
+heroImage: /manda.jpg
 actionText: 赶快看我 →
-heroText: 一条程序猿的进化史
-tagline: 热爱生活，享受技术！
+heroText: i ♥ manda
+tagline: 热爱技术，享受生活Live a good life meet slowly
 actionLink: /note/
 features:
 - title: 简洁至上

@@ -1,9 +1,9 @@
 module.exports = {
   base: '/zhanwei/',
-  title: 'zhanwei',
-  description: '热爱技术，享受生活！',
+  title: 'manda',
+  description: 'weizhanzhan | zhanwei | manda |博客 |Live a good life meet slowly',//好好生活，慢慢相遇
   head: [
-    ['link', { rel: 'icon',  href: '/ico.png'  }],
+    ['link', { rel: 'icon',  href: '/manda.jpg'  }],
     //增加manifest.json
     ['link', { rel: 'manifest', href: '/manifest.json' }],
   ],
@@ -33,7 +33,8 @@ module.exports = {
         },
         {
           title:'javascript',children:[
-            { title:'笔记',path:'javascript/skill'}
+            { title:'笔记',path:'javascript/skill'},
+            { title:'设计模式',path:'javascript/design'}
           ]
         },
         {
@@ -42,27 +43,24 @@ module.exports = {
           ]
         },
         {
-          title: 'vue',
-          children: [
+          title: 'vue', children: [
             { title:'自定义组件的v-model',path:'vue/v-model'},
+            { title:'ElementUI',path:'vue/elementui'},
             'vue/router', 'vue/vuex'
           ],
         },
         {
-          title: 'react',
-          children: [
+          title: 'react', children: [
             'react/base'
           ]
         },
         {
-          title:'极光推送',
-          children:[
+          title:'极光推送', children:[
             { title:'APICloud',path:'jpush/apicloud'}
           ]
         },
         {
-          title: 'git',
-          children:[
+          title: 'git', children:[
             { title:'基础',path:'git/base'},
             { title:'自动部署项目',path:'git/autoplay'}
           ]

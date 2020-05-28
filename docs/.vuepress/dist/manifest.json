@@ -1,6 +1,6 @@
 {
-    "name": "展展的PWA",
-    "short_name": "Vuepress",
+    "name": "manda",
+    "short_name": "weizhanzhan",
     "start_url": "/index.html",
     "display": "standalone",
     "background_color": "#fff",
@@ -9,7 +9,7 @@
       {
         "src": "/youhun.jpg",
         "sizes": "120x120",
-        "type": "/ico.png"
+        "type": "/manda.jpg"
       }
     ]
   }
