@@ -1,1 +1,2 @@
-# 这里是我记录的技术
+# Live a good life meet slowly
+> 好好生活，慢慢相遇

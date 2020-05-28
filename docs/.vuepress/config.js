@@ -68,11 +68,12 @@ module.exports = {
       ],
     },
   },
-  plugins: {
-    '@vuepress/nprogress':true,
-    '@vuepress/pwa':{
+  plugins: [
+    [ '@vuepress/nprogress', true ],
+    ['@vuepress/pwa', {
       serviceWorker: true,
       updatePopup: true
-    }
-  }
+     }
+    ],
+  ]
 }
