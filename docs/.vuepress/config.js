@@ -46,6 +46,7 @@ module.exports = {
           title: 'vue', children: [
             { title:'自定义组件的v-model',path:'vue/v-model'},
             { title:'ElementUI',path:'vue/elementui'},
+            { title:'基础原理',path:'vue/base'},
             'vue/router', 'vue/vuex'
           ],
         },
