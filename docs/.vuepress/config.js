@@ -34,7 +34,7 @@ module.exports = {
         {
           title:'javascript',children:[
             { title:'笔记',path:'javascript/skill'},
-            { title:'设计模式',path:'javascript/design'}
+            { title:'设计模式',path:'javascript/design'},
           ]
         },
         {
@@ -58,6 +58,11 @@ module.exports = {
         {
           title:'极光推送', children:[
             { title:'APICloud',path:'jpush/apicloud'}
+          ]
+        },
+        {
+          title:'前端微服务', children:[
+            { title:'Single-spa',path:'micro-fe/single-spa'}
           ]
         },
         {
