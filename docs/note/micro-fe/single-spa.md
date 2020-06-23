@@ -55,3 +55,124 @@
 ### 原有项目改造
 
 #### Vue
+1. 安装 single-spa-vue 、systemjs-webpack-interop、vue-cli-plugin-single-spa（解决访问跨域）
+2. vue.config.js 添加
+```js
+module.exports = {
+  chainWebpack: config => {
+    config.devServer.set('inline', false)
+    config.devServer.set('hot', false)
+    config.output.filename(`[name].js`)
+    config.externals(['vue', 'vue-router'])
+  },
+  filenameHashing: false
+}
+```
+3.新建set-public-path.js
+```js
+import { setPublicPath } from 'systemjs-webpack-interop';
+
+setPublicPath('注册的服务名称');
+```
+4.main.js调整
+```js
+import './set-public-path';
+import Vue from 'vue';
+import singleSpaVue from 'single-spa-vue';
+import App from './App.vue';
+
+Vue.config.productionTip = false
+
+
+const vueLifecycles = singleSpaVue({
+  Vue,
+  appOptions: {
+    render: (h) => h(App),
+  },
+});
+
+export const bootstrap = vueLifecycles.bootstrap;
+export const mount = vueLifecycles.mount;
+export const unmount = vueLifecycles.unmount;
+```
+#### react
+暂未整理~~
+### 新建子应用项目
+
+如果你想全局安装 create-single-spa ，请在终端中运行如下命令：
+```yarm
+npm install --global create-single-spa
+# or
+yarn global add create-single-spa
+```
+你也可以选择本地安装 create-single-spa
+```yarm
+npm init single-spa
+# or
+npx create-single-spa
+# or 
+yarn create single-spa
+```
+最终的创建命令（[参考官网](https://zh-hans.single-spa.js.org/docs/create-single-spa)）
+```
+# Different ways of doing the same thing
+create-single-spa --framework react（不同框架，可还成vue）
+npm init single-spa --framework react
+npx create-single-spa --framework react
+yarn create single-spa --framework react
+```
+
+### 创建主应用
+- 创建文件夹，然后npm初始化,安装依赖 npm i serve --s
+- 创建index.html
+```html
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>test</title>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta name="importmap-type" content="systemjs-importmap" />
+    <script type="systemjs-importmap"  src="/importmap-config.json"></script>
+    <script src="https://cdn.jsdelivr.net/npm/systemjs/dist/system.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/systemjs/dist/extras/amd.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/systemjs/dist/extras/named-exports.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/systemjs/dist/extras/named-register.js"></script> 
+    <body>
+      <script>
+        System.import('/single-spa-config.js')
+      </script>
+
+    </body>
+</html>
+```
+- 新建single-spa-config.js,启动single spa ,注册服务
+```js
+;(function() {
+  Promise.all([System.import('single-spa')]).then( function (modules) {
+    var singleSpa = modules[0]
+    singleSpa.registerApplication(
+      '服务名（对应子项目setPublicPath的名字）',
+      ()=>{
+        return System.import('服务名（对应子项目setPublicPath的名字）')
+      },
+      location=> true
+    );
+    singleSpa.start();
+  })
+})()
+```
+- 新建importmap-config.json，配置服务和其他库对应的链接,服务名，比方说下面的base。就是我的子应用，后面的链接就是子项目运行起来之后的app.js的地址
+```json
+{
+  "imports": {
+    "single-spa": "https://cdn.jsdelivr.net/npm/single-spa@5.1.1/lib/system/single-spa.min.js",
+    "base":"http://localhost:8080/app.js",
+    "system":"http://localhost:8082/app.js",
+    "vue-router": "https://cdn.jsdelivr.net/npm/vue-router@3.1.6/dist/vue-router.min.js",
+    "vue": "https://cdn.jsdelivr.net/npm/vue@2.6.11/dist/vue.min.js"
+  }
+}
+```
+- 在package.json中的scripts中增加启动命令"serve": "serve -s -l 7000"。运行后就可以看到你的子应用展示出来了。
