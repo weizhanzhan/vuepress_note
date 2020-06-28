@@ -14,8 +14,9 @@ module.exports = {
     repoLabel: 'github',
     nav: [
       { text: 'Home', link: '/'  },
-      { text: '记录', link: '/note/'   },
-      { text: 'Languages', items: [ { text: 'Chinese', link: '/language/chinese' },  { text: 'English',  link: '/language/english' } ] }
+      { text: 'Logs', link: '/note/'   },
+      { text: 'Work', link: '/work/'}
+      // { text: 'Languages', items: [ { text: 'Chinese', link: '/language/chinese' },  { text: 'English',  link: '/language/english' } ] }
     ],
     // sidebarDepth: 2,
     // sidebar: 'auto', /zhanwei/ico.png
@@ -72,6 +73,13 @@ module.exports = {
           ]
         }
       ],
+      '/work/':[
+        {
+          title: 'Amole', children: [
+            { title: 'Vsp', path: 'amole/vsp' }
+          ]
+        },
+      ]
     },
   },
   plugins: [
