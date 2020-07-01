@@ -1,6 +1,6 @@
 ---
 home: true
-heroImage: /manda.jpg
+heroImage: /bg.jpg
 actionText: start
 heroText: i ♥ manda
 tagline: 热爱技术，享受生活 Live a good life meet slowly

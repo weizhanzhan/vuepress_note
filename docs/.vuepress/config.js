@@ -48,6 +48,7 @@ module.exports = {
             { title:'自定义组件的v-model',path:'vue/v-model'},
             { title:'ElementUI',path:'vue/elementui'},
             { title:'基础原理',path:'vue/base'},
+            { title:'Directive',path:'vue/directive'},
             'vue/router', 'vue/vuex'
           ],
         },
