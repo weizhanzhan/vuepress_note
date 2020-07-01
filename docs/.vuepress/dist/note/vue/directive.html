@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>自定义Vue指令 | manda</title>
+    <meta name="description" content="weizhanzhan | zhanwei | manda |博客 |Live a good life meet slowly">
+    <meta name="generator" content="VuePress 1.4.0">
+    <link rel="icon" href="/zhanwei/manda.jpg">
+  <link rel="manifest" href="/zhanwei/manifest.json">
+    
+    <link rel="preload" href="/zhanwei/assets/css/0.styles.54c6c2ef.css" as="style"><link rel="preload" href="/zhanwei/assets/js/app.7f2c897a.js" as="script"><link rel="preload" href="/zhanwei/assets/js/2.056ead7a.js" as="script"><link rel="preload" href="/zhanwei/assets/js/21.1105e742.js" as="script"><link rel="preload" href="/zhanwei/assets/js/5.dc1392fa.js" as="script"><link rel="prefetch" href="/zhanwei/assets/js/10.cc86770e.js"><link rel="prefetch" href="/zhanwei/assets/js/11.fbf25132.js"><link rel="prefetch" href="/zhanwei/assets/js/12.000983c0.js"><link rel="prefetch" href="/zhanwei/assets/js/13.29062f58.js"><link rel="prefetch" href="/zhanwei/assets/js/14.435f140e.js"><link rel="prefetch" href="/zhanwei/assets/js/15.d5f67d32.js"><link rel="prefetch" href="/zhanwei/assets/js/16.f48e4ee5.js"><link rel="prefetch" href="/zhanwei/assets/js/17.ebea200c.js"><link rel="prefetch" href="/zhanwei/assets/js/18.46127a32.js"><link rel="prefetch" href="/zhanwei/assets/js/19.546d48f6.js"><link rel="prefetch" href="/zhanwei/assets/js/20.8804ad73.js"><link rel="prefetch" href="/zhanwei/assets/js/22.282df64f.js"><link rel="prefetch" href="/zhanwei/assets/js/23.299a980e.js"><link rel="prefetch" href="/zhanwei/assets/js/24.e8d5435b.js"><link rel="prefetch" href="/zhanwei/assets/js/25.db35127e.js"><link rel="prefetch" href="/zhanwei/assets/js/26.1fbd78fd.js"><link rel="prefetch" href="/zhanwei/assets/js/27.bd348979.js"><link rel="prefetch" href="/zhanwei/assets/js/28.f2854355.js"><link rel="prefetch" href="/zhanwei/assets/js/3.961aebce.js"><link rel="prefetch" href="/zhanwei/assets/js/4.411e4545.js"><link rel="prefetch" href="/zhanwei/assets/js/6.c76d6562.js"><link rel="prefetch" href="/zhanwei/assets/js/7.72cd2e9b.js"><link rel="prefetch" href="/zhanwei/assets/js/8.27c3fdcc.js"><link rel="prefetch" href="/zhanwei/assets/js/9.5fe70c71.js">
+    <link rel="stylesheet" href="/zhanwei/assets/css/0.styles.54c6c2ef.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/zhanwei/" class="home-link router-link-active"><!----> <span class="site-name">manda</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/zhanwei/" class="nav-link">
+  Home
+</a></div><div class="nav-item"><a href="/zhanwei/note/" class="nav-link router-link-active">
+  Logs
+</a></div><div class="nav-item"><a href="/zhanwei/work/" class="nav-link">
+  Work
+</a></div> <a href="https://github.com/weizhanzhan/vuepress_note" target="_blank" rel="noopener noreferrer" class="repo-link">
+    github
+    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/zhanwei/" class="nav-link">
+  Home
+</a></div><div class="nav-item"><a href="/zhanwei/note/" class="nav-link router-link-active">
+  Logs
+</a></div><div class="nav-item"><a href="/zhanwei/work/" class="nav-link">
+  Work
+</a></div> <a href="https://github.com/weizhanzhan/vuepress_note" target="_blank" rel="noopener noreferrer" class="repo-link">
+    github
+    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></nav>  <ul class="sidebar-links"><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading open"><span>vuepress</span> <span class="arrow down"></span></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/zhanwei/note/vuepress/step.html" class="sidebar-link">快速搭建</a></li></ul></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>学习计划</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>javascript</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>typescript</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>vue</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>react</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>极光推送</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>前端微服务</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>git</span> <span class="arrow right"></span></p> <!----></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="自定义vue指令"><a href="#自定义vue指令" class="header-anchor">#</a> 自定义Vue指令</h1> <p>除了核心功能默认内置的指令 (v-model 和 v-show)，Vue 也允许注册自定义指令。注意，在 Vue2.0 中，代码复用和抽象的主要形式是组件。然而，有的情况下，你仍然需要对普通 DOM 元素进行底层操作，这时候就会用到自定义指令</p> <p>以下是TypeScript语法：</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">import</span> Vue <span class="token keyword">from</span> <span class="token string">'vue'</span>
+
+<span class="token keyword">const</span> directives<span class="token operator">:</span><span class="token punctuation">{</span> <span class="token punctuation">[</span>key<span class="token operator">:</span>string<span class="token punctuation">]</span><span class="token operator">:</span>any <span class="token punctuation">}</span> <span class="token operator">=</span> <span class="token punctuation">{</span>
+  <span class="token comment">/**
+   * ElInput输入框 限制只能输入数字
+   */</span>
+  number<span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token function">bind</span><span class="token punctuation">(</span><span class="token parameter">el<span class="token operator">:</span>HTMLElement</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      el<span class="token punctuation">.</span><span class="token function-variable function">handler</span> <span class="token operator">=</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span> 
+        <span class="token keyword">const</span> input <span class="token operator">=</span> el <span class="token keyword">as</span> HTMLInputElement
+        input<span class="token punctuation">.</span>value <span class="token operator">=</span> input<span class="token punctuation">.</span>value<span class="token punctuation">.</span><span class="token function">replace</span><span class="token punctuation">(</span><span class="token regex">/^\D*(\d*(?:\.\d{0,2})?).*$/g</span><span class="token punctuation">,</span> <span class="token string">'$1'</span><span class="token punctuation">)</span> <span class="token comment">// 保留两位小数</span>
+       
+      <span class="token punctuation">}</span>
+      el<span class="token punctuation">.</span><span class="token function">addEventListener</span><span class="token punctuation">(</span><span class="token string">'input'</span><span class="token punctuation">,</span> el<span class="token punctuation">.</span>handler<span class="token punctuation">)</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token function">unbind</span><span class="token punctuation">(</span><span class="token parameter">el<span class="token operator">:</span>HTMLElement</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      el<span class="token punctuation">.</span><span class="token function">removeEventListener</span><span class="token punctuation">(</span><span class="token string">'input'</span><span class="token punctuation">,</span> el<span class="token punctuation">.</span>handler <span class="token keyword">as</span> VoidFunction<span class="token punctuation">)</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token comment">/**
+   * ElInput输入框 自动获取焦点
+   */</span>
+  foucs<span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token function-variable function">inserted</span><span class="token operator">:</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token parameter">el<span class="token operator">:</span>HTMLInputElement</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      input<span class="token punctuation">.</span><span class="token function">focus</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+Object<span class="token punctuation">.</span><span class="token function">keys</span><span class="token punctuation">(</span>directives<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">forEach</span><span class="token punctuation">(</span><span class="token parameter">directiveName</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+  Vue<span class="token punctuation">.</span><span class="token function">directive</span><span class="token punctuation">(</span>directiveName<span class="token punctuation">,</span> directives<span class="token punctuation">[</span>directiveName<span class="token punctuation">]</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+
+</code></pre></div><p>整理中...</p></div> <footer class="page-edit"><!----> <!----></footer> <!----> </main></div><div class="global-ui"><!----></div></div>
+    <script src="/zhanwei/assets/js/app.7f2c897a.js" defer></script><script src="/zhanwei/assets/js/2.056ead7a.js" defer></script><script src="/zhanwei/assets/js/21.1105e742.js" defer></script><script src="/zhanwei/assets/js/5.dc1392fa.js" defer></script>
+  </body>
+</html>
