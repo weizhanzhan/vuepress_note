@@ -7,6 +7,7 @@ module.exports = {
     //增加manifest.json
     ['link', { rel: 'manifest', href: '/manifest.json' }],
   ],
+  theme: 'antdocs',
   themeConfig: {
     // 你的GitHub仓库，请正确填写
     repo: 'https://github.com/weizhanzhan/vuepress_note',
@@ -15,6 +16,7 @@ module.exports = {
     nav: [
       { text: 'Home', link: '/'  },
       { text: 'Logs', link: '/note/'   },
+      { text: 'Project', link: '/project/'},
       { text: 'Work', link: '/work/'}
       // { text: 'Languages', items: [ { text: 'Chinese', link: '/language/chinese' },  { text: 'English',  link: '/language/english' } ] }
     ],
@@ -80,7 +82,8 @@ module.exports = {
             { title: 'Vsp', path: 'amole/vsp' }
           ]
         },
-      ]
+      ],
+      '/project/':[ ]
     },
   },
   plugins: [
