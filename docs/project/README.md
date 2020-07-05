@@ -62,3 +62,6 @@ for (let i = 0; i < 23; i++) {
 </a-list>
 
 
+### 参考
+scroll
+https://github.com/artiely/tulip-scroll
