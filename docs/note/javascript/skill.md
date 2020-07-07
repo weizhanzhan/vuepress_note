@@ -1,5 +1,5 @@
-# JavaScript，自己觉得有必要了解的东西
-## 取最大值
+# JavaScript Skill
+## 1.取最大值
 ```js
 
 const arr = [1,2,3,4,5,6,7]
@@ -13,7 +13,7 @@ for (let i = 0; i <arr.length - 1; i++) {
 arr.sort((num1,num2)=> num2-num1) //arr[0]最大值
 ```
 
-## 动态修改伪类元素content
+## 2.动态修改伪类元素content
 ```html
 <div>
   <span data-before='哈哈哈'>你笑啥</span>
@@ -32,7 +32,7 @@ let change = ()=>{
 };
 ```
 
-## 正则限制输入框只能输入数字和小数点
+## 3.正则限制输入框只能输入数字和小数点
 ```vue
 <template>
   <el-input :value="count" @input="handleCountIsNumber"/>
@@ -55,4 +55,20 @@ export default {
   }
 }
 </script>
+```
+## 4.flex自适应宽高，超出滚动条
+```html
+ <div
+    class="container"
+    style="height:0px"
+  >
+    <div style="display:flex;height:100%;width:100%">
+      <div style="flex:1;overflow: auto;">
+        <div style="height:1000px;width:2000px">
+          我是内容
+        </div>
+      </div>
+    </div>
+  </div>
+
 ```

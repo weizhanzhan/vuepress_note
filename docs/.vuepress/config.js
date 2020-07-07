@@ -36,7 +36,8 @@ module.exports = {
         },
         {
           title:'javascript',children:[
-            { title:'笔记',path:'javascript/skill'},
+            { title:'log',path:'javascript/skill'},
+            { title:'算法',path:'javascript/algorithm'},
             { title:'设计模式',path:'javascript/design'},
           ]
         },
@@ -51,7 +52,6 @@ module.exports = {
             { title:'ElementUI',path:'vue/elementui'},
             { title:'基础原理',path:'vue/base'},
             { title:'Directive',path:'vue/directive'},
-            'vue/router', 'vue/vuex'
           ],
         },
         {
