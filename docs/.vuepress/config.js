@@ -6,6 +6,9 @@ module.exports = {
     ['link', { rel: 'icon',  href: '/manda.jpg'  }],
     //增加manifest.json
     ['link', { rel: 'manifest', href: '/manifest.json' }],
+    ['meta', { name: 'referrer', content: 'never' }],
+    ['meta', { name: 'keywords', content: 'zhanwei,weizhanzhan,vuepress,blog,manda,博客,笔记,魏展，魏展展' }]
+
   ],
   theme: 'antdocs',
   themeConfig: {
@@ -13,85 +16,20 @@ module.exports = {
     repo: 'https://github.com/weizhanzhan/vuepress_note',
     // 自定义仓库链接文字。
     repoLabel: 'github',
-    nav: [
-      { text: 'Home', link: '/'  },
-      { text: 'Logs', link: '/note/'   },
-      { text: 'Project', link: '/project/'},
-      { text: 'Work', link: '/work/'}
-      // { text: 'Languages', items: [ { text: 'Chinese', link: '/language/chinese' },  { text: 'English',  link: '/language/english' } ] }
-    ],
+    lastUpdated: '上次更新',
+    logo: '/manda.jpg',
+    nav: require('./config/nav'),
     // sidebarDepth: 2,
     // sidebar: 'auto', /zhanwei/ico.png
-    sidebar: {
-      '/note/': [
-        {
-          title: 'vuepress', children: [
-            { title: '快速搭建', path: 'vuepress/step' }
-          ]
-        },
-        {
-          title:'学习计划',children:[
-            { title:'2020',path:'plan/2020'}
-          ]
-        },
-        {
-          title:'javascript',children:[
-            { title:'log',path:'javascript/skill'},
-            { title:'算法',path:'javascript/algorithm'},
-            { title:'设计模式',path:'javascript/design'},
-          ]
-        },
-        {
-          title:'typescript',children:[
-            { title:'笔记',path:'typescript/work'}
-          ]
-        },
-        {
-          title: 'vue', children: [
-            { title:'自定义组件的v-model',path:'vue/v-model'},
-            { title:'ElementUI',path:'vue/elementui'},
-            { title:'基础原理',path:'vue/base'},
-            { title:'Directive',path:'vue/directive'},
-          ],
-        },
-        {
-          title: 'react', children: [
-            'react/base'
-          ]
-        },
-        {
-          title:'极光推送', children:[
-            { title:'APICloud',path:'jpush/apicloud'}
-          ]
-        },
-        {
-          title:'前端微服务', children:[
-            { title:'Single-spa',path:'micro-fe/single-spa'}
-          ]
-        },
-        {
-          title: 'git', children:[
-            { title:'基础',path:'git/base'},
-            { title:'自动部署项目',path:'git/autoplay'}
-          ]
-        }
+    sidebar: require('./config/sidebar'),
+    plugins: [
+      [ '@vuepress/nprogress', true ],
+      ['@vuepress/pwa', {
+        serviceWorker: true,
+        updatePopup: true
+      }
       ],
-      '/work/':[
-        {
-          title: 'Amole', children: [
-            { title: 'Vsp', path: 'amole/vsp' }
-          ]
-        },
-      ],
-      '/project/':[ ]
-    },
-  },
-  plugins: [
-    [ '@vuepress/nprogress', true ],
-    ['@vuepress/pwa', {
-      serviceWorker: true,
-      updatePopup: true
-     }
-    ],
-  ]
+      ['@vuepress/last-updated',true]
+    ]
+  }
 }

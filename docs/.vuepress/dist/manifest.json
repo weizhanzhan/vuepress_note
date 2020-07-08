@@ -1,15 +1,25 @@
 {
     "name": "manda",
     "short_name": "weizhanzhan",
-    "start_url": "/index.html",
+    "start_url": "index.html",
     "display": "standalone",
     "background_color": "#fff",
     "theme_color": "#3eaf7c",
     "icons": [
       {
-        "src": "/youhun.jpg",
+        "src": "/manda.jpg",
         "sizes": "120x120",
-        "type": "/manda.jpg"
+        "type": "image/jpg"
+      }
+    ],
+    "related_applications": [
+      {
+        "platform": "web",
+        "url": "https://play.google.com/store/apps/details?id=cheeaun.hackerweb"
+      },
+      {
+        "platform": "play",
+        "url": "https://play.google.com/store/apps/details?id=cheeaun.hackerweb"
       }
     ]
   }
