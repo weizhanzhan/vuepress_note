@@ -30,8 +30,8 @@ footerWrap:
   items:
   - title: 掘金
     link: https://juejin.im/timeline
-  - title: Ant Design Vue
-    link: https://antdv.com/
+  - title: 每日3+1题库
+    link: http://www.h-camel.com/index.html
 - headline: 💬社区交流
   items:
   - title: VuePress 社区
