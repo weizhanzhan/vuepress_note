@@ -1,4 +1,4 @@
 # Start
 <div>
-  <img src="/b.jpg" />
+  <img src="../.vuepress/public/b.jpg" />
 </div>
