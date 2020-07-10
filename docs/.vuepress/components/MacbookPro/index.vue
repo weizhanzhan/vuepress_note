@@ -1,6 +1,6 @@
 <template>
   <div class="mac">
-   
+
     <div class="screen">
        <div class="camera"></div>
       <div class="screen-box"></div>

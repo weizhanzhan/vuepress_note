@@ -18,6 +18,7 @@ module.exports =  [
     ]
   },
   { title:'HTML' , path:'HTML'},
+  { title:'Css' , path:'Css'},
   {
     title:'typescript',children:[
       { title:'笔记',path:'typescript/work'}
@@ -29,6 +30,7 @@ module.exports =  [
       { title:'ElementUI',path:'vue/elementui'},
       { title:'基础原理',path:'vue/base'},
       { title:'Directive',path:'vue/directive'},
+      { title:'Vue配置',path:'vue/optimization'}
     ],
   },
   {
