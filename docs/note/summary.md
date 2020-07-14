@@ -1,6 +1,6 @@
 # 总结
 
-## 项目优化
+## Vue项目优化
 
 ### 1.配置 externals 引入 cdn 资源
 
@@ -73,4 +73,36 @@ module.exports = {
   presets: ["@vue/app", { useBuiltIns: "entry" }],
   plugins
 };
+```
+
+### 3.开启gzip压缩
+将所有的静态资源压缩为gzip,就可以极大的减少静态资源的大小，提升浏览器加载速度
+- 安装 compression-webpack-plugin
+```
+yarn add compression-webpack-plugin -D
+```
+- 配置
+修改vue.config.js
+```js
+const CompressionWebpackPlugin = require('compression-webpack-plugin')
+const isProd = process.env.NODE_ENV === 'production'
+module.exports = {
+  configureWebpack: config => {
+    if (isProd) {
+      // 配置webpack 压缩
+      config.plugins.push(
+        new CompressionWebpackPlugin({
+          test: /\.js$|\.html$|\.css$/,
+          // 超过4kb压缩
+          threshold: 4096
+        })
+      )
+    }
+  }
+}
+
+```
+### 去除build map文件
+```
+productionSourceMap
 ```
