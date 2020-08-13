@@ -50,5 +50,5 @@ function initJpush(){
 切记！上传代码，然后云编译，安装app
 ### 推送设置
 集成Android，应用包名就是Apicloud的应用包名，复制保存！
-![An image](./img/apicloud-zs.png)
+<!-- ![An image](./img/apicloud-zs.png) -->
 然后点击最下面的立即发送，看结果
